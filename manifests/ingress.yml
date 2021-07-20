@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "limsakscluster-878f"
+    labels:
+        app: "limsakscluster-878f"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: limsaksclusteradfa-limsakscluster-878f.e5a0ba251a7f4b0fb7da.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "limsakscluster-878f"
+                servicePort: 80
